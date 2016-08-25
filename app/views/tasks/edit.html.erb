@@ -1,0 +1,15 @@
+<h1>Edit Tasks</h1>
+<%= @task.errors.full_messages.join(", ") %>
+<%= form_for @task do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+
+  <%= f.submit %>
+
+<% end %>
